@@ -1,88 +1,142 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #020631;
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
 }
 
 .app {
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .app .mainHeading h1 {
   text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.app h1,
-h2 {
-  color: white;
+.app .subHeading {
+  text-align: center;
+  color: #777;
+  margin-bottom: 1.5rem;
 }
 
 .app .input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app .input {
-  margin-top: 0.8em;
-  width: 20em;
-  height: 2em;
-  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 6px;
-  padding: 5px;
+  margin-bottom: 1rem;
 }
 
 .app .input input {
-  width: 100%;
-  height: 1.6em;
-  border-color: transparent;
-  outline-color: transparent;
+  flex: 1;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #f0f2f5;
+  font-size: 1rem;
+  color: #333;
 }
 
-.app i {
+.app .input i {
   cursor: pointer;
-  font-size: larger;
-  font-weight: 900;
-  color: grey;
-  margin-right: 5px;
+  font-size: 1.5rem;
+  color: #777;
+  margin-left: 1rem;
 }
+
 .app .todos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.app .todos .todo {
-  margin-top: 0.8em;
-  width: 20em;
-  height: 2em;
-  background-color: white;
+
+.app .todo {
+  margin-bottom: 0.8rem;
+  width: 100%;
+  background-color: #f0f2f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 6px;
-  padding: 5px;
+  border-radius: 4px;
+  padding: 0.5rem;
 }
-.app .todos .todo .left {
+
+.app .todo .left {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-.app .todos .todo .left p {
-  margin-left: 3px;
-  font-size: medium;
-  font-weight: 700;
-  font-style: normal;
-  color: grey;
+.app .todo .left input[type="checkbox"] {
+  margin-right: 0.5rem;
 }
 
+.app .todo .left p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.app .todo .right {
+  display: flex;
+  align-items: center;
+}
+
+.app .todo .right i {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #777;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .app .mainHeading h1 {
+    font-size: 1.5rem;
+  }
+
+  .app .subHeading {
+    font-size: 0.875rem;
+  }
+
+  .app .input input {
+    height: 2rem;
+    padding: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .app .input i {
+    font-size: 1.25rem;
+  }
+
+  .app .todo {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+  }
+
+  .app .todo .left p {
+    font-size: 0.875rem;
+  }
+
+  .app .todo .right i {
+    font-size: 0.875rem;
+  }
+}
